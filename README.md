@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+Approach:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Create state for each input value that I will need to store to validate, this creates a controlled component
 
-## Available Scripts
+- Attach onChange() events to each input to update the state for each specific value
 
-In the project directory, you can run:
+- As the animals input requires multiple items I need to create an array which pushes new animals onto the array rather than overwriting the state all together. 
 
-### `npm start`
+- Create a validate function which contains all my conditionals for validating every input
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Setup an error message depending on which input has the error
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Call the validate() inside the submitHandler() only if all conditionals evaluate to true
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Enhancements:
 
-### `npm run build`
+- Currently the animal input does not remove items from the array when the input is unchecked, this needs to be updated.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add a custom hook to contain state and validate function to clean the component up.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Further work on CSS and styling errors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Debugging:
 
-### `npm run eject`
+-Console.log()
+-Chrome dev tools
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Supported on Chrome, Firefox, Microsoft Edge
